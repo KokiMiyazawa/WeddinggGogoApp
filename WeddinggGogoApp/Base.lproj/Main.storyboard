@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wcw-Dl-xCZ">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeddinggGogoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="WeddinggGogoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wep-2W-xga">
-                                <rect key="frame" x="150" y="422.5" width="114" height="51"/>
+                                <rect key="frame" x="130.66666666666666" y="380.66666666666669" width="114" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="ENTER?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,20 +45,109 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Gogo View Controller-->
         <scene sceneID="GN0-sJ-wk2">
             <objects>
-                <viewController id="lax-kK-eO6" sceneMemberID="viewController">
+                <viewController id="lax-kK-eO6" customClass="GogoViewController" customModule="WeddinggGogoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v0K-f7-jej">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su2-vy-C7d">
+                                <rect key="frame" x="178" y="181" width="19" height="39"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ees-lX-Rb3">
+                                <rect key="frame" x="67" y="286" width="241" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6Vs-zJ-fWq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijX-Ub-daS">
+                                <rect key="frame" x="127.66666666666669" y="582" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Nkc-tZ-kAC"/>
+                                    <constraint firstAttribute="height" constant="120" id="wW8-eE-Iz5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <connections>
+                                    <action selector="tappedDownButton:" destination="lax-kK-eO6" eventType="touchDown" id="7om-Fc-TcI"/>
+                                    <action selector="tappedUpButton:" destination="lax-kK-eO6" eventType="touchUpInside" id="e96-92-5ue"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="ijX-Ub-daS" firstAttribute="top" secondItem="ees-lX-Rb3" secondAttribute="bottom" constant="56" id="0Mj-RA-eec"/>
+                            <constraint firstItem="ees-lX-Rb3" firstAttribute="centerY" secondItem="v0K-f7-jej" secondAttribute="centerY" id="0Uh-l7-RWB"/>
+                            <constraint firstItem="ees-lX-Rb3" firstAttribute="centerX" secondItem="v0K-f7-jej" secondAttribute="centerX" id="8ki-b5-Rcp"/>
+                            <constraint firstItem="ees-lX-Rb3" firstAttribute="leading" secondItem="v7g-2w-93e" secondAttribute="leading" constant="67" id="AOC-ME-MqT"/>
+                            <constraint firstItem="su2-vy-C7d" firstAttribute="top" secondItem="v7g-2w-93e" secondAttribute="top" constant="93" id="JDO-Gw-3Fl"/>
+                            <constraint firstItem="su2-vy-C7d" firstAttribute="centerX" secondItem="v0K-f7-jej" secondAttribute="centerX" id="fka-Vj-V4l"/>
+                            <constraint firstItem="ijX-Ub-daS" firstAttribute="centerX" secondItem="v0K-f7-jej" secondAttribute="centerX" id="gnU-Qk-E8X"/>
+                            <constraint firstItem="su2-vy-C7d" firstAttribute="leading" secondItem="v7g-2w-93e" secondAttribute="leading" constant="178" id="kpk-AA-XQR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="v7g-2w-93e"/>
                     </view>
+                    <connections>
+                        <outlet property="GogoImage" destination="ees-lX-Rb3" id="lm9-FD-rtP"/>
+                        <outlet property="button" destination="ijX-Ub-daS" id="Dir-uu-Drh"/>
+                        <outlet property="gameNumber" destination="su2-vy-C7d" id="fJO-3O-DH1"/>
+                        <segue destination="PD5-7c-3oe" kind="presentation" identifier="ToCongratulations" modalTransitionStyle="flipHorizontal" id="CZX-mF-Fud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5Y-av-AhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="16"/>
+            <point key="canvasLocation" x="1923.1884057971015" y="18.75"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="IH5-U9-uGB">
+            <objects>
+                <viewController id="PD5-7c-3oe" customClass="PhotoViewController" customModule="WeddinggGogoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgn-yr-t9v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SlB-CI-L8k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVL-Kr-XaN">
+                                <rect key="frame" x="0.0" y="636" width="375" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQV-8b-0bP">
+                                <rect key="frame" x="0.0" y="641" width="375" height="72"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="57"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SlB-CI-L8k" firstAttribute="leading" secondItem="rbE-EG-Swr" secondAttribute="leading" id="BFr-O5-eZf"/>
+                            <constraint firstItem="rbE-EG-Swr" firstAttribute="trailing" secondItem="tQV-8b-0bP" secondAttribute="trailing" id="E7f-77-Oig"/>
+                            <constraint firstItem="tQV-8b-0bP" firstAttribute="leading" secondItem="rbE-EG-Swr" secondAttribute="leading" id="EPr-ZZ-kxz"/>
+                            <constraint firstItem="SlB-CI-L8k" firstAttribute="top" secondItem="sgn-yr-t9v" secondAttribute="top" id="GBL-WH-IxX"/>
+                            <constraint firstAttribute="bottom" secondItem="SlB-CI-L8k" secondAttribute="bottom" id="Kj1-pX-Bxh"/>
+                            <constraint firstAttribute="trailing" secondItem="FVL-Kr-XaN" secondAttribute="trailing" id="Ocw-5J-EEo"/>
+                            <constraint firstItem="FVL-Kr-XaN" firstAttribute="centerY" secondItem="tQV-8b-0bP" secondAttribute="centerY" id="QkB-LS-QrW"/>
+                            <constraint firstItem="rbE-EG-Swr" firstAttribute="bottom" secondItem="tQV-8b-0bP" secondAttribute="bottom" constant="65" id="ZYW-oY-t0H"/>
+                            <constraint firstItem="rbE-EG-Swr" firstAttribute="bottom" secondItem="FVL-Kr-XaN" secondAttribute="bottom" constant="60" id="drl-N9-Dzq"/>
+                            <constraint firstItem="FVL-Kr-XaN" firstAttribute="leading" secondItem="rbE-EG-Swr" secondAttribute="leading" id="eQz-C6-fBt"/>
+                            <constraint firstItem="SlB-CI-L8k" firstAttribute="trailing" secondItem="rbE-EG-Swr" secondAttribute="trailing" id="iw1-Wj-JLN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rbE-EG-Swr"/>
+                    </view>
+                    <connections>
+                        <outlet property="weddingImage" destination="SlB-CI-L8k" id="mbg-61-APo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWw-hW-3so" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857.971014492754" y="18.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sw1-fE-yUW">
@@ -66,7 +155,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wcw-Dl-xCZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OoS-hF-sOH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		70137A41232D505D00CBCA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A40232D505D00CBCA22 /* AppDelegate.swift */; };
-		70137A43232D505D00CBCA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A42232D505D00CBCA22 /* ViewController.swift */; };
+		70137A43232D505D00CBCA22 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A42232D505D00CBCA22 /* EntryViewController.swift */; };
 		70137A46232D505D00CBCA22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70137A44232D505D00CBCA22 /* Main.storyboard */; };
 		70137A48232D505E00CBCA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70137A47232D505E00CBCA22 /* Assets.xcassets */; };
 		70137A4B232D505E00CBCA22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70137A49232D505E00CBCA22 /* LaunchScreen.storyboard */; };
 		70137A56232D505E00CBCA22 /* WeddinggGogoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A55232D505E00CBCA22 /* WeddinggGogoAppTests.swift */; };
 		70137A61232D505E00CBCA22 /* WeddinggGogoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A60232D505E00CBCA22 /* WeddinggGogoAppUITests.swift */; };
+		70137A71232F52DC00CBCA22 /* GogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A70232F52DC00CBCA22 /* GogoViewController.swift */; };
+		70137A73232F8DF000CBCA22 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70137A72232F8DF000CBCA22 /* PhotoViewController.swift */; };
+		706AA202233114BC00CC0930 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA201233114BC00CC0930 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		70137A3D232D505D00CBCA22 /* WeddinggGogoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddinggGogoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70137A40232D505D00CBCA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70137A42232D505D00CBCA22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70137A42232D505D00CBCA22 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		70137A45232D505D00CBCA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70137A47232D505E00CBCA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70137A4A232D505E00CBCA22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		70137A5C232D505E00CBCA22 /* WeddinggGogoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeddinggGogoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70137A60232D505E00CBCA22 /* WeddinggGogoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddinggGogoAppUITests.swift; sourceTree = "<group>"; };
 		70137A62232D505E00CBCA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70137A70232F52DC00CBCA22 /* GogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GogoViewController.swift; sourceTree = "<group>"; };
+		70137A72232F8DF000CBCA22 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		706AA201233114BC00CC0930 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706AA202233114BC00CC0930 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				70137A54232D505E00CBCA22 /* WeddinggGogoAppTests */,
 				70137A5F232D505E00CBCA22 /* WeddinggGogoAppUITests */,
 				70137A3E232D505D00CBCA22 /* Products */,
+				706AA200233114BB00CC0930 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +105,10 @@
 		70137A3F232D505D00CBCA22 /* WeddinggGogoApp */ = {
 			isa = PBXGroup;
 			children = (
+				70137A42232D505D00CBCA22 /* EntryViewController.swift */,
 				70137A40232D505D00CBCA22 /* AppDelegate.swift */,
-				70137A42232D505D00CBCA22 /* ViewController.swift */,
+				70137A70232F52DC00CBCA22 /* GogoViewController.swift */,
+				70137A72232F8DF000CBCA22 /* PhotoViewController.swift */,
 				70137A44232D505D00CBCA22 /* Main.storyboard */,
 				70137A47232D505E00CBCA22 /* Assets.xcassets */,
 				70137A49232D505E00CBCA22 /* LaunchScreen.storyboard */,
@@ -123,6 +133,14 @@
 				70137A62232D505E00CBCA22 /* Info.plist */,
 			);
 			path = WeddinggGogoAppUITests;
+			sourceTree = "<group>";
+		};
+		706AA200233114BB00CC0930 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706AA201233114BC00CC0930 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +274,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70137A43232D505D00CBCA22 /* ViewController.swift in Sources */,
+				70137A43232D505D00CBCA22 /* EntryViewController.swift in Sources */,
+				70137A73232F8DF000CBCA22 /* PhotoViewController.swift in Sources */,
+				70137A71232F52DC00CBCA22 /* GogoViewController.swift in Sources */,
 				70137A41232D505D00CBCA22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
