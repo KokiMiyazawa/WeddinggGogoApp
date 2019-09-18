@@ -15,7 +15,7 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //0-9の写真をランダムで表示
-        let RAMDOM = String(arc4random_uniform(2))
+        let RAMDOM = String(arc4random_uniform(9))
         let IMAGE = UIImage(named: "WEDDINGPHOTO\(RAMDOM)")
         weddingImage.image = IMAGE
         //UIImageViewにタップイベントを追加

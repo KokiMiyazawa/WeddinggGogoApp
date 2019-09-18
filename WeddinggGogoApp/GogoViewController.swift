@@ -36,7 +36,7 @@ class GogoViewController: UIViewController {
             
             number = number + 1
             gameNumber.text = String(number)
-            randomNumber = arc4random_uniform(2)
+            randomNumber = arc4random_uniform(68)
             
             if randomNumber == 0 {
                 isHit = 2
